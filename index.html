@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landsat Compare - Landing Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-satellite logo-icon"></i>
+                <span>LandsatCompare</span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-bg"></div> <!-- Background GIF -->
+            <div class="hero-content">
+                <h1>Compare Ground Observations with Landsat Data</h1>
+                <p>Define locations, get notifications, and analyze Landsat SR data with ease.</p>
+                <a href="http://127.0.0.1:5500/restart/test.html" class="btn">Get Started</a>
+            </div>
+        </section>
+        
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-map-marked-alt feature-icon"></i>
+                        <h3>Define Target Locations</h3>
+                        <p>Set and manage your areas of interest with our intuitive mapping interface.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-bell feature-icon"></i>
+                        <h3>Landsat Pass Notifications</h3>
+                        <p>Never miss a satellite pass with our timely alert system.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line feature-icon"></i>
+                        <h3>Access SR Data</h3>
+                        <p>Retrieve and visualize Surface Reflectance data with powerful analytics tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="section dark-section">
+            <div class="container">
+                <h2 class="section-title">Landsat Data Use Cases</h2>
+                <div class="use-case-grid">
+                    <div class="use-case-card">
+                        <a href="https://landsat.gsfc.nasa.gov/benefits/ecosystems-biodiversity/">
+                        <h3><i class="fas fa-tree"></i> Ecosystems & Biodiversity</h3></a>
+                        <p>Track changes in land use and deforestation with precise temporal analysis.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <a href="https://landsat.gsfc.nasa.gov/benefits/agriculture-food-security/">
+                        <h3><i class="fas fa-tractor"></i> Agricultural Management</h3></a>
+                        <p>Assess crop health and optimize irrigation using multispectral data.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <a href="https://landsat.gsfc.nasa.gov/benefits/disaster-management/">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Disaster Response</h3></a>
+                        <p>Rapidly assess damage from natural disasters with before-and-after imagery.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <a href="https://landsat.gsfc.nasa.gov/benefits/climate-carbon/">
+                        <h3><i class="fas fa-temperature-high"></i> Climate Change Research</h3></a>
+                        <p>Study long-term environmental changes with decades of consistent data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="text-center">Join us in leveraging the power of Landsat data for your research and applications.</p>
+                <div class="text-center">
+                    <a href="#contact" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LandsatCompare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll event listener for header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('.nav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
